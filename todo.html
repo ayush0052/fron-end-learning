@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .cls-table {
+        width: 100%;
+        -webkit-border-horizontal-spacing: 0;
+        -webkit-border-vertical-spacing: 1px;
+        margin-top: 20px;
+        border: 1px solid #cac6c6;
+      }
+      .cls-table > tbody > tr {
+        border: 1px solid #cec9cd;
+      }
+      .cls-table > tbody > tr:nth-child(odd) {
+        background-color: #dddd;
+      }
+      .cls-table > tbody > tr:nth-child(even) {
+        background-color: #ffffff;
+      }
+      .cls-table tr td {
+        padding: 10px;
+      }
+      .cls-table tr td:nth-child(2) {
+        text-align: right;
+      }
+      .cls-table tr td:nth-child(2) button {
+        background: transparent;
+        border: none;
+      }
+
+      .cls-name {
+        background-color: #f9f9f9;
+        border: 1px solid #cec9cd;
+        height: 24px;
+        flex-grow: 1;
+      }
+      .cls-submit {
+        background-color: #659df6;
+        border: none;
+        padding: 6px 40px;
+        color: #ffffff;
+      }
+
+      .cls-todo-container {
+        padding: 0;
+        border: 1px solid #dfdfdf;
+        border-radius: 5px;
+        max-width: 650px;
+        width: 650px;
+        background-color: #fff;
+      }
+      .cls-todo-container > h3 {
+        border-bottom: 1px solid #dfdfdf;
+        padding: 16px;
+        margin-block-start: 0;
+        background-color: #f7f7f7;
+      }
+
+      .cls-todo-frm {
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0px 0px 5px 0px #659df6;
+      }
+      .cls-todo-frm input {
+        padding: 6px 16px;
+      }
+      .cls-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: "Roboto", sans-serif;
+        background: rgb(54, 119, 183);
+        background: linear-gradient(
+          90deg,
+          rgba(54, 119, 183, 1) 0%,
+          rgba(134, 82, 223, 0.5046612394957983) 60%,
+          rgba(82, 38, 157, 0.5046612394957983) 100%
+        );
+      }
+      @media (max-width: 992px) {
+        .cls-todo-container {
+          max-width: 900px;
+          width: 900px;
+        }
+      }
+    </style>
+
+    <script>
+      function test() {
+        window.alert(hello)
+      }
+    </script>
+    <body class="cls-body">
+      <div class="cls-todo-container">
+        <h3>Todo (5)</h3>
+        <div style="padding: 10px 16px">
+          <div class="cls-todo-frm">
+            <input
+              type="text"
+              placeholder="Enter todo here"
+              class="cls-name"
+              name="todo"
+            />
+            <button class="cls-submit" id="hello" onclick="test()">submit</button>
+          </div>
+          <table class="cls-table">
+            <tr class="cls-tr">
+              <td>
+                <input type="checkbox" name=" " value=" " />
+                <label> walk the dog</label>
+              </td>
+              <td class="cls-td">
+                <button class="button1">
+                  <img src="./edit.png" style="width: 28px" alt="" srcset="" />
+                </button>
+                <button class="button2">
+                  <img
+                    src="./delete.png"
+                    style="width: 28px"
+                    alt=""
+                    srcset=""
+                  />
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" name=" " value="" />
+                <span> authenticate with passport-js</span>
+              </td>
+              <td>
+                <button class="button1">
+                  <img src="./edit.png" style="width: 28px" alt="" srcset="" />
+                </button>
+                <button class="button2">
+                  <img
+                    src="./delete.png"
+                    style="width: 28px"
+                    alt=""
+                    srcset=""
+                  />
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" name="" value="" />
+                <label>validcate register input </label>
+              </td>
+              <td>
+                <button class="button1">
+                  <img src="./edit.png" style="width: 28px" alt="" srcset="" />
+                </button>
+                <button class="button2">
+                  <img
+                    src="./delete.png"
+                    style="width: 28px"
+                    alt=""
+                    srcset=""
+                  />
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" name="" value="" />
+                <label>create reddit webside</label>
+              </td>
+              <td>
+                <button class="button1">
+                  <img src="./edit.png" style="width: 28px" alt="" srcset="" />
+                </button>
+                <button class="button2">
+                  <img
+                    src="./delete.png"
+                    style="width: 28px"
+                    alt=""
+                    srcset=""
+                  />
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" name="" value="" />
+                <label>store sessions on mongobd</label>
+              </td>
+              <td>
+                <button class="button1">
+                  <img src="./edit.png" style="width: 28px" alt="" srcset="" />
+                </button>
+                <button class="button2">
+                  <img
+                    src="./delete.png"
+                    style="width: 28px"
+                    alt=""
+                    srcset=""
+                  />
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </body>
+  </head>
+</html>

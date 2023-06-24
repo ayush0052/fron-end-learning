@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .cls-container {
+        background: linear-gradient(
+          90deg,
+          rgba(54, 119, 183, 1) 0%,
+          rgba(111, 85, 175, 1) 100%
+        );
+        width: 300px;
+        margin: 24px auto;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+      .cls-form-container {
+        background-color: #fff;
+        width: 300px;
+        padding: 0;
+        border-radius: 10px;
+      }
+      .cls-form-container >div{
+        padding: 20px;
+      }
+      .cls-label-header {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+        text-align: center;
+        margin-bottom: -7px;
+      }
+      .cls-form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+      }
+      .cls-form input {
+        padding: 16px 16px;
+        border: none;
+
+        border-bottom: 1px solid #c2c2c2;
+      }
+      .cls-login-button {
+        padding: 16px;
+        border-radius: 30px;
+        border: 1px solid#2691d9;
+        background-color: #2691d9;
+        color: #fff;
+        font-size: 18px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+      .cls-forgot-pswd {
+        text-decoration: none;
+        color: #a5a5a5;
+      }
+      .cls-greeting{
+        padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
+    
+    </style>
+    <script>
+      
+      function test(){
+        let username= document.getElementById("username").value;
+        console.log(username);
+        
+        
+        
+        let password = document.getElementById("password").value ;
+        console.log(password);
+        if (username==""){
+          alert("enter username")
+
+        } else if (password==""){
+          alert("enter password")
+          
+        } else 
+         { 
+         document.getElementById("box").style.display="none";
+
+         const d = new Date ();
+         let time= d.getHours
+        let greeting;
+         if (time<10){
+          greeting="good morning";
+        }else if (time <20){
+          greeting="good afetrnoon";
+        }else {
+          greeting="good evening";
+        }
+
+         document.getElementById("newbox").innerHTML=greeting+ username;
+         document.getElementById("newbox").style.display="block"
+         }
+         } 
+
+
+      
+     
+    </script>
+  </head>
+
+  <body class="cls-container">
+    <div  id ="newbox" class="cls-form-container cls-greeting">
+      
+    </div>
+    <div id="box" class="cls-form-container">
+      <h2 class="cls-label-header">Login</h2>
+        <div>
+            <div class="cls-form">
+                <input   type="text" placeholder="Username"id="username" name="username" />
+        
+                <input  type="password" placeholder="Password"id="password" name="pwd" />
+                <a href="" class="cls-forgot-pswd">Forgot Password?</a>
+                <!-- <input type="submit" value="login"> -->
+                <button class="cls-login-button" id="login-btn" onclick="test()">Login</button>
+                <span>Not a member? <a href="">Signup</a></span>
+            </div>
+        
+      
+    </div>
+    
+  </body>
+</html>
